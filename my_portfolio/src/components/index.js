@@ -1,2 +1,6 @@
 export * from './Home'
 export * from './Navigation'
+export * from './About'
+export * from './Background'
+export * from './MyPortfolio'
+export * from './Contact'

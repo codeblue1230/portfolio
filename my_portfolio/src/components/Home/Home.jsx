@@ -1,7 +1,6 @@
 // External Imports
 import React from "react"
 import {
-    Container,
     Row,
     Col
 } from "react-bootstrap"
@@ -11,77 +10,162 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 
 // Internal Imports
 import { Navigation } from "../Navigation"
-import background from "../../assets/images/background.jpg"
-import test from "../../assets/images/test.jpg"
+import { Background } from "../Background"
+import city from "../../assets/images/city.jpg"
 
-const Title = styled('h1')({
+const BigHeading = styled("h1")({
     textAlign: "center",
-    textShadow: "5px 3px grey",
     fontFamily: "Roboto Slab",
-    color: "white",
-    padding: "15px",
     fontWeight: "bold",
-    fontSize: "2.25rem",
+    fontSize: "8vw",
+
+    "@media (max-width: 768px)": {
+        fontSize: "15vw",  
+    },
+
+    "@media (min-width: 768px) and (max-width: 1100px)": {
+        fontSize: "12vw",  
+    },
 })
 
-const BackgroundImage = styled("div")({
-    backgroundImage: `url(${background})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    minHeight: "100vh",
+const MainText = styled('h1')({
+    textAlign: "center",
+    fontFamily: "Roboto Slab",
+    fontWeight: "bold",
+    fontSize: "2.5vw",
+
+    "@media (min-width: 0px) and (max-width: 330px)": {
+        fontSize: "9vw",  
+    },
+
+    "@media (min-width: 330px) and (max-width: 768px)": {
+        fontSize: "7vw",  
+    },
+
+    "@media (min-width: 768px) and (max-width: 1100px)": {
+        fontSize: "5vw",  
+    },
 })
+
+const StyledLinkedInIcon = styled(LinkedInIcon)({
+    fontSize: "2.5vw",  
+    textAlign: "center",
+
+    "@media (min-width: 0) and (max-width: 400px)": {
+        fontSize: "10vw",  
+    },
+
+    "@media (min-width: 400px) and (max-width: 768px)": {
+        fontSize: "7vw",  
+    },
+
+    "@media (min-width: 768px) and (max-width: 1100px)": {
+        fontSize: "4vw", 
+    },
+});
+
+const StyledGitHubIcon = styled(GitHubIcon)({
+    fontSize: "2.5vw",  
+    textAlign: "center",
+
+    "@media (min-width: 0px) and (max-width: 400px)": {
+        fontSize: "10vw",  
+    },
+
+    "@media (min-width: 400px) and (max-width: 768px)": {
+        fontSize: "7vw",  
+    },
+
+    "@media (min-width: 768px) and (max-width: 1100px)": {
+        fontSize: "4vw", 
+    },
+});
 
 const MyLinks = styled("a")({
     textDecoration: "none",
     color: "white",
 
     "&:hover": {
-        color: "grey",
+        color: "teal",
         cursor: "pointer"
     }
 })
 
+const Description = styled("p")({
+    textAlign: "center",
+    width: "35vw",
+    margin: "3vh auto 0 auto",
+
+    "@media (min-width: 0px) and (max-width: 600px)": {
+        width: "80vw",  
+    },
+
+    "@media (min-width: 600px) and (max-width: 1000px)": {
+        width: "50vw",  
+    },
+})
+
 const Image = styled("img")({
-    width: "50%",
     display: "block",
     margin: "auto",
-    minWidth: "175px",
-    minHeight: "175px",
-    maxHeight: "50%",
-    maxWidth: "50%",
+    height: "25vw",
+    width: "25vw",
+    borderRadius: "1000px",
+    border: "solid 4px teal",
+
+    "@media (min-width: 0) and (max-width: 280px)": {
+        height: "70vw",
+        width: "70vw",  
+    },
+
+    "@media (min-width: 280px) and (max-width: 400px)": {
+        height: "70vw",
+        width: "70vw",  
+    },
+
+    "@media (min-width: 400px) and (max-width: 490px)": {
+        height: "50vw",
+        width: "50vw",  
+    },
+
+    "@media (min-width: 490px) and (max-width: 770px)": {
+        height: "45vw",
+        width: "45vw",
+    },
+
+    "@media (min-width: 770px) and (max-width: 1100px)": {
+        height: "30vw",
+        width: "30vw",
+    },
 })
 
 export const Home = () => {
-    const resp_font = {
-        "@media (max-width: 500px)": {
-            fontSize: "5rem"
-        }
-    }
     return (
         <>
-            <BackgroundImage>
-                <Navigation/>
-                <Container fluid style={{width: "100%"}}>
-                    <Row style={{margin: "15vh 0 0"}}>
-                        <Col lg={6}>
-                            <Title>Hello,</Title>
-                            <Title>I'm Marc</Title>
-                            <Title>Full Stack Developer</Title>
-                            <Title>
-                                <MyLinks sx={{marginRight: "30px"}}>
-                                    <LinkedInIcon sx={{fontSize: "3rem", textAlign: "center"}}/>
-                                </MyLinks>
-                                <MyLinks>
-                                    <GitHubIcon sx={{fontSize: "3rem", textAlign: "center"}}/>
-                                </MyLinks>
-                            </Title>
-                        </Col>
-                        <Col lg={6}>
-                            <Image src={test} alt="Picture of me"/>
-                        </Col>
-                    </Row>
-                </Container>
-            </BackgroundImage>
+            <Navigation/>
+            <Background>
+                <Row>
+                    <BigHeading>Marc Engle</BigHeading>
+                    <Col xs={12} style={{marginTop: "2vh"}}>
+                        <MainText style={{marginBottom: "3vh"}}>Full Stack Developer</MainText>
+                        <Image src={city} alt="Picture of me"/>
+                        <Description>
+                            I'm an aspiring software engineer based in Florida. I'm hoping my first coding 
+                            job will be on-site, but I am also open to remote opportunities. Currently, I 
+                            am learning PHP and WordPress in addition to building new projects. Feel free 
+                            to explore my portfolio and let me know what you think
+                        </Description>
+                        <MainText>
+                            <MyLinks href="https://www.linkedin.com/in/marc-engle-759378270/" style={{marginRight: "3vw"}}>
+                                <StyledLinkedInIcon/>
+                            </MyLinks>
+                            <MyLinks href="https://github.com/codeblue1230">
+                                <StyledGitHubIcon/>
+                            </MyLinks>
+                        </MainText>
+                    </Col>
+                </Row>
+            </Background>
         </>
     )
 }
