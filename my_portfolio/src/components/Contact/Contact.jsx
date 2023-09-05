@@ -43,12 +43,12 @@ const ContactDetails = styled("p")({
 })
 
 const Links = styled("a")({
-    color: "white",
+    color: "#3cdfff",
     textDecoration: "none",
 
     "&:hover": {
         color: "teal",
-        cursor: "pointer"
+        cursor: "pointer",
     }
 })
 
@@ -87,7 +87,9 @@ export const Contact = () => {
                         <ContactDetails>Phone: 845-270-1641</ContactDetails>
                     </Col>
                     <Col xs={12} style={{marginTop: "1vh", marginBottom: "0"}}>
-                        <ContactDetails>Email: marcengle30@gmail.com</ContactDetails>
+                        <ContactDetails>
+                            Email: <Links href="mailto:marcengle30@gmail.com">marcengle30@gmail.com</Links>
+                            </ContactDetails>
                     </Col>
                     <Col xs={12} style={{marginTop: "1vh", marginBottom: "0"}}>
                         <ContactDetails>

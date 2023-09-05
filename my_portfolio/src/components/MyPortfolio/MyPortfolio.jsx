@@ -176,6 +176,7 @@ export const MyPortfolio = () => {
                 </Row>
                 <Row style={{marginTop: "2vh"}}>
                     <Col xs={12} style={{display: "flex", justifyContent: "center", gap: "20px"}}>
+                        <PortfolioButton href="https://calculatorflask1230.glitch.me/">View Hosted Site</PortfolioButton>
                         <PortfolioButton href="https://github.com/codeblue1230/flask_calculator.git">View GitHub Repo</PortfolioButton>
                     </Col>
                     <Col style={{display: "flex"}}>
