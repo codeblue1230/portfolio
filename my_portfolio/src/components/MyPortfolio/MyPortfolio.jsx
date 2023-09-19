@@ -13,6 +13,7 @@ import { Background } from "../Background"
 import map from "../../assets/images/map.png"
 import calc from "../../assets/images/calc.png"
 import number from "../../assets/images/number.png"
+import pong from "../../assets/images/pong_ss.png"
 
 const PortfolioHeading = styled("h1")({
     textAlign: "center",
@@ -164,8 +165,10 @@ export const MyPortfolio = () => {
                         <ProjectDescription>
                             This project improves the experience of B2B Sales Managers.  I built it for my wife and it decreased
                             the time it takes her to plan her schedule by 50%.  It allows the user to enter the address and name
-                            of a store into a form and add that location to a map.  The projects uses the TomTom Maps API, along
-                            with HTML/CSS, JavaScript, Python(Flask), and SQL.  It has user authentication and full CRUD operations.
+                            of a store into a form and add that location to a map.  The user also has the option to import an Excel
+                            spreadsheet and have all the points plotted and saved into localStorage.  The projects uses the TomTom 
+                            Maps API, alongwith HTML/CSS, JavaScript, Python(Flask), and SQL.  It has user authentication and 
+                            full CRUD operations.
                         </ProjectDescription>
                     </Col>
                 </Row>
@@ -185,6 +188,26 @@ export const MyPortfolio = () => {
                             POST request on submit.  When submitted, the form calls the "calculate" endpoint and returns the
                             page with the solution to the user's problem.  It uses classes to practice the principles of object
                             oriented programming.
+                        </ProjectDescription>
+                    </Col>
+                </Row>
+                <hr style={{width: "90%", margin: "2vh auto 1vh auto"}}/>
+                <Row style={{display: "flex", justifyContent: "center", marginTop: "3vh", textAlign: "center"}}>
+                    <h3>Pong</h3>
+                    <Image src={pong}/>
+                </Row>
+                <Row style={{marginTop: "2vh"}}>
+                    <Col xs={12} style={{display: "flex", justifyContent: "center", gap: "20px"}}>
+                        <PortfolioButton href="https://github.com/codeblue1230/pong.git">View GitHub Repo</PortfolioButton>
+                    </Col>
+                    <Col style={{display: "flex"}}>
+                        <ProjectDescription>
+                            I built Pong using Python with the Pygame library.  It is built with object oriented
+                            programming in mind.  The game tracks each user's score and it ends when either player 
+                            reaches 5 points.  The x and y values of the ball are manipulated to move the ball
+                            across the screen.  I check the outer bounds of the ball to see if it collides with 
+                            a player or the edge of the screen.  Based on what happens we either send the ball
+                            the other direction or award one player a point and reset the ball.  
                         </ProjectDescription>
                     </Col>
                 </Row>
