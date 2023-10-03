@@ -14,6 +14,7 @@ import map from "../../assets/images/map.png"
 import calc from "../../assets/images/calc.png"
 import number from "../../assets/images/number.png"
 import pong from "../../assets/images/pong_ss.png"
+import poker from "../../assets/images/poker.png"
 
 const PortfolioHeading = styled("h1")({
     textAlign: "center",
@@ -169,6 +170,28 @@ export const MyPortfolio = () => {
                             spreadsheet and have all the points plotted and saved into localStorage.  The projects uses the TomTom 
                             Maps API, alongwith HTML/CSS, JavaScript, Python(Flask), and SQL.  It has user authentication and 
                             full CRUD operations.
+                        </ProjectDescription>
+                    </Col>
+                </Row>
+                <hr style={{width: "90%", margin: "2vh auto 1vh auto"}}/>
+                <Row style={{display: "flex", justifyContent: "center", marginTop: "3vh", textAlign: "center"}}>
+                    <h3>Poker Hand API</h3>
+                    <Image src={poker}/>
+                </Row>
+                <Row style={{marginTop: "2vh"}}>
+                    <Col xs={12} style={{display: "flex", justifyContent: "center", gap: "20px"}}>
+                        <PortfolioButton href="https://poker1230.pythonanywhere.com/">Check Out API</PortfolioButton>
+                        <PortfolioButton href="https://github.com/codeblue1230/poker_api.git">View GitHub Repo</PortfolioButton>
+                    </Col>
+                    <Col style={{display: "flex"}}>
+                        <ProjectDescription>
+                            Many new poker players have trouble knowing what their hand is when comparing their two hole
+                            cards to the 5 community cards on the board.  I created an API to help with this issue.  The URL
+                            takes in 7 cards as parameters.  The first 2 cards represent the user's hole cards and the next
+                            5 are the community cards on the board.  A get request is sumbitted and it uses the data to
+                            return a key and value in JSON format.  The key is the user's best possible hand and the value
+                            is a list of the user's 5 best cards.  This was all done in Python.  I will make a front
+                            end using this API in the near future.
                         </ProjectDescription>
                     </Col>
                 </Row>
