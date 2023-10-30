@@ -15,6 +15,7 @@ import calc from "../../assets/images/calc.png"
 import number from "../../assets/images/number.png"
 import pong from "../../assets/images/pong_ss.png"
 import poker from "../../assets/images/poker.png"
+import pokerFrontEnd from "../../assets/images/poker_frontend.png"
 
 const PortfolioHeading = styled("h1")({
     textAlign: "center",
@@ -175,6 +176,28 @@ export const MyPortfolio = () => {
                 </Row>
                 <hr style={{width: "90%", margin: "2vh auto 1vh auto"}}/>
                 <Row style={{display: "flex", justifyContent: "center", marginTop: "3vh", textAlign: "center"}}>
+                    <h3>Poker Hand Analyzer Front-End</h3>
+                    <Image src={pokerFrontEnd}/>
+                </Row>
+                <Row style={{marginTop: "2vh"}}>
+                    <Col xs={12} style={{display: "flex", justifyContent: "center", gap: "20px"}}>
+                        <PortfolioButton href="https://poker-best-hand.netlify.app/">View Hosted Site</PortfolioButton>
+                        <PortfolioButton href="https://github.com/codeblue1230/poker_frontend">View GitHub Repo</PortfolioButton>
+                    </Col>
+                    <Col style={{display: "flex"}}>
+                        <ProjectDescription>
+                            Welcome to the Poker Hand Analyzer, an intuitive tool designed to help new poker players understand 
+                            their hand strength. The front-end interface offers a seamless experience, allowing users to
+                            input their two hole cards and the five community cards on the board. Upon submission, the application 
+                            swiftly communicates with my backend API, providing real-time analysis to determine the user's best 
+                            possible hand.  With a user-friendly design and a responsive layout catering to both desktop and mobile 
+                            users, the Poker Hand Analyzer is a visually appealing and practical tool for poker enthusiasts, 
+                            combining a robust backend API with an engaging front end to elevate your poker game.
+                        </ProjectDescription>
+                    </Col>
+                </Row>
+                <hr style={{width: "90%", margin: "2vh auto 1vh auto"}}/>
+                <Row style={{display: "flex", justifyContent: "center", marginTop: "3vh", textAlign: "center"}}>
                     <h3>Poker Hand API</h3>
                     <Image src={poker}/>
                 </Row>
@@ -190,8 +213,7 @@ export const MyPortfolio = () => {
                             takes in 7 cards as parameters.  The first 2 cards represent the user's hole cards and the next
                             5 are the community cards on the board.  A get request is sumbitted and it uses the data to
                             return a key and value in JSON format.  The key is the user's best possible hand and the value
-                            is a list of the user's 5 best cards.  This was all done in Python.  I will make a front
-                            end using this API in the near future.
+                            is a list of the user's 5 best cards.  This was all done in Python.
                         </ProjectDescription>
                     </Col>
                 </Row>
