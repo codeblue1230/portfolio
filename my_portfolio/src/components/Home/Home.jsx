@@ -4,7 +4,7 @@ import {
     Row,
     Col
 } from "react-bootstrap"
-import { styled } from "@mui/system"
+import { padding, styled } from "@mui/system"
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
@@ -150,10 +150,16 @@ export const Home = () => {
                         <MainText style={{marginBottom: "3vh"}}>Full Stack Developer</MainText>
                         <Image src={city} alt="Picture of me"/>
                         <Description>
-                            I'm an aspiring software engineer based in Florida. I'm hoping my first coding 
-                            job will be on-site, but I am also open to remote opportunities. Currently, I 
-                            am learning PHP and WordPress in addition to building new projects. Feel free 
-                            to explore my portfolio and let me know what you think
+                            Aspiring software engineer based in Florida open to on-site, hybrid, or remote
+                            coding opportunities.  
+                        </Description>
+                        <Description>
+                            Languages: Python, HTML, CSS, JavaScript, Python<br></br>
+                            Frameworks: Bootstrap, Flask, React<br></br>
+                            Databases: SQL (PostgreSQL)<br></br>
+                        </Description>
+                        <Description style={{paddingBottom: "15px"}}>
+                            Please feel free to explore my portfolio and get in touch.
                         </Description>
                         <MainText>
                             <MyLinks href="https://www.linkedin.com/in/marc-engle-759378270/" style={{marginRight: "3vw"}}>
