@@ -154,7 +154,7 @@ export const Home = () => {
                             coding opportunities.  
                         </Description>
                         <Description>
-                            Languages: Python, HTML, CSS, JavaScript, Python<br></br>
+                            Languages: Python, HTML, CSS, JavaScript, TypeScript<br></br>
                             Frameworks: Bootstrap, Flask, React<br></br>
                             Databases: SQL (PostgreSQL)<br></br>
                         </Description>
